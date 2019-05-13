@@ -44,7 +44,7 @@ namespace MySite.Web {
             });
 
             app.UseSwaggerUI(c => {
-                c.SwaggerEndpoint("/api/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint($"{this.Configuration["rootPath"] ?? ""}/api/swagger/v1/swagger.json", "My API V1");
                 c.RoutePrefix = "api/swagger";
             });
 
